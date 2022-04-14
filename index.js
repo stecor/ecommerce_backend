@@ -10,7 +10,7 @@ dotenv.config()
 //   console.log('test is successfull')
 // })
 
-app.use('/api/user', userRoute)
+app.use('/api/users', userRoute)
 
 mongoose
   .connect(process.env.MONGO_URL)
