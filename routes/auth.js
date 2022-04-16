@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const user = require('../models/User')
+const User = require('../models/User')
 
 // Register
 router.post('/register', (req, res) => {
@@ -8,5 +8,8 @@ router.post('/register', (req, res) => {
     email: req.body.email,
     password: req.body.password,
   })
+
+  newUser.save()
 })
+
 module.exports = router
